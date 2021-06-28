@@ -1,4 +1,4 @@
-# Weight-Predictor-ML-model-from-Height
+# Weight-Predictor-Web Application from-Height
 
 This is a web application created using Python FLASK, where the machine learning model is deployed 
 
