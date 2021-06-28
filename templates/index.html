@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weight Prediction</title>
+</head>
+<body>
+
+	<h1><center><strong>Weight Predictor from Height</strong></center></h1>
+
+	<form method="POST" action="/">
+
+		<input type="text" name="height" placeholder="Enter your height in metres">
+		<br><input type="submit">
+		
+
+
+	</form>
+
+	{% if your_weight %}
+
+		<h2>Your weight should be {{ your_weight }} kg </h2>
+
+	{% endif %}
+
+</body>
+</html>
