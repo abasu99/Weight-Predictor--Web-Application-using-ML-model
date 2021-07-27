@@ -13,9 +13,14 @@ def hello():
 @app.route('/',	 methods= ['POST'])
 def submit():
 	if request.method == 'POST':
-		height = float(request.form['height'])
+		try:
 
-		weight=str(model.predict([[height]]) [0])
+			height = float(request.form['height'])
+
+			weight=str(model.predict([[height]]) [0])
+
+		except:
+			return render_template("index.html", error="Enter digits only")
 
 	return render_template("index.html", your_weight= weight)
 
