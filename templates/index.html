@@ -1,16 +1,62 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Weight Prediction</title>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<style>
+	body{
+		 
+		  background-image: url('https://c1.wallpaperflare.com/preview/225/327/829/tape-measure-measure-pay-craft.jpg');
+		  color: goldenrod;
+		}
+		
+		
+		.button {
+				  
+				  border: none;
+				  color: black;
+				  padding: 12px 28px;
+				  text-align: center;
+				  text-decoration: none;
+				  display: inline-block;
+				  font-size: 16px;
+				  margin: 4px 2px;
+				  transition-duration: 0.4s;
+				  cursor: pointer;
+				}
+				.button2 {
+				  background-color: #008CBA; 
+				  color: black; 
+				  border: 2px solid #008CBA;
+				  border-radius: 12px;
+				}
+
+				.button2:hover {
+				  background-color: red;
+				  color: white;
+				}
+				input[type=text] {
+				  width: 20%;
+				  padding: 12px 20px;
+				  margin: 8px 0;
+				  box-sizing: border-box;
+				  border: 2px solid blue;
+				  border-radius: 12px;
+				  text-align: center;
+}
+	</style>
 </head>
 <body>
 
-	<h1><center><strong>Weight Predictor from Height</strong></center></h1>
+	<h1><center><strong><mark>Weight Predictor from Height</mark></strong></center></h1>
 
 	<form method="POST" action="/">
 
-		<input type="text" name="height" placeholder="Enter your height in metres">
-		<br><input type="submit">
+		<center><input type="text" name="height" placeholder="Enter your height in metres" required="Please, enter your height !!"></center>
+		<!-- <br><input type="submit"> -->
+		<center><button class="button button2">Submit</button></center>
 		
 
 
@@ -18,7 +64,15 @@
 
 	{% if your_weight %}
 
-		<h2>Your weight should be {{ your_weight }} kg </h2>
+		<h2><center><mark>Your weight should be {{ your_weight }} kg </mark></center></h2>
+		
+
+	{% endif %}
+
+	{% if error %}
+
+	
+		<h2><center><mark>{{ error }}</mark></center></h2>
 
 	{% endif %}
 
